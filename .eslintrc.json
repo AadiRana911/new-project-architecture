@@ -5,18 +5,30 @@
         "next/core-web-vitals",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "prettier"
+        "prettier",
+        "plugin:storybook/recommended"
     ],
     "globals": {
         "React": "readonly"
     },
+    // New
     "overrides": [
         {
-            "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"]
+            "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+            "rules": {
+                // example of overriding a rule
+                "storybook/hierarchy-separator": "error"
+            }
         }
     ],
     "rules": {
-        "no-unused-vars": [2, { "args": "after-used", "argsIgnorePattern": "^_" }],
+        "no-unused-vars": [
+            2,
+            {
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
         "@typescript-eslint/no-unused-vars": 0,
         "@typescript-eslint/no-explicit-any": 1,
         "no-useless-escape": 0,
