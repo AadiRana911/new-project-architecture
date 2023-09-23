@@ -1,3 +1,4 @@
+'use client'
 import ComponentTemplate from '@/templates/components'
 
 export default function Home() {
